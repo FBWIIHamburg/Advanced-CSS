@@ -158,5 +158,14 @@ opacity: 0;
     }
 }
 
+.navigation-icon{
+    position: relative;
+
+}
+.navigation-icon::after{
+    width: 3rem;
+
+}
+
 
 
