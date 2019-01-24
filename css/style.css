@@ -160,12 +160,57 @@ opacity: 0;
 
 .navigation-icon{
     position: relative;
+    margin-top: 3.5rem;
 
+}
+.navigation-icon::after,
+.navigation-icon::before,
+.navigation-icon{
+    width: 3rem;
+    height: 0.2rem;
+    background-color: #333333;
+  display: inline-block;  
+}
+
+.navigation-icon::after,
+.navigation-icon::before{
+    content: "";
+    position: absolute;
+    left: 0;
+
+}
+
+.navigation-icon::before{
+    top:-0.8rem;
+    
 }
 .navigation-icon::after{
-    width: 3rem;
-
+    top:0.8rem;
+    
 }
+.navigation-button{
+    right: 0;
+}
+.navigation-button:hover .navigation-icon::after{
+    top:1rem;
+}
+.navigation-button:hover .navigation-icon::before{
+    top:-1rem;
+}
+.navigation-background{
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    background-image: radial-gradient(#7ed56f, #28b485);
+    z-index: 1;
+    border-radius: 50%;
+}
+.navigation-checkbox{
+    display: none;
+}
+
 
 
 
