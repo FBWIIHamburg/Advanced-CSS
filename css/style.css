@@ -55,16 +55,25 @@ body{
     letter-spacing: 3.5rem;
     color: #fff;
     display: block;
+    animation: moveRight 1s;
+    animation-delay: 0.5;
+    animation-fill-mode: backwards;
+    backface-visibility: hidden;
 }
 .header-text-box>h1 :nth-child(2){
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
+    letter-spacing: 1.6rem;
     color: #fff;
     text-transform: uppercase;
     display: block;
     margin-bottom: 5rem;
-     
+    /* animation: moveLeft 1s; */
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    animation-delay: 0.5;
+    animation-fill-mode: backwards;
+    backface-visibility: hidden;
 }
 .btn{
 text-decoration: none;
@@ -127,6 +136,26 @@ opacity: 0;
     
     opacity: 1; 
 }
+}
+@keyframes moveRight{
+    0%{
+        transform: translateX(-3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes moveLeft{
+    0%{
+        transform: translateX(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 
